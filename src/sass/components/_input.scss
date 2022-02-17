@@ -50,3 +50,9 @@ input[type="text"] {
 input[type="checkbox"] {
   margin-right: 0.6rem;
 }
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}

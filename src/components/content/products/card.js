@@ -44,7 +44,7 @@ function Card() {
                 </span>
                 *
                 <span>
-                  <h5>{item.km}</h5>
+                  <h5>{item.km} KM</h5>
                 </span>
               </div>
               <div class="showcase-info_first-section-price">
