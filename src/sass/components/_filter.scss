@@ -2,4 +2,12 @@
   padding: $gutter/3;
   background: $light-gray;
   flex: 0 0 20%;
+  .filterArea_title {
+    font-size: 1rem;
+    margin: $gutter/5 0;
+    display: block;
+  }
+  .filterArea_button {
+    @extend %button-primary;
+  }
 }

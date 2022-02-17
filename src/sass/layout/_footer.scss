@@ -1,9 +1,7 @@
-@import "/src/sass/abstracts/variables";
-
 footer {
   background-color: $black;
   display: flex;
-  padding: $gutter/2 $gutter/2 $gutter/2;
+  padding: $gutter $gutter $gutter/2;
   flex-direction: column;
   .footer-menu_container {
     display: flex;

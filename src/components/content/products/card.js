@@ -6,7 +6,7 @@ function Card() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.jsonbin.io/b/620d9bd74bf50f4b2dff1d6e`, {
+    fetch(`https://api.jsonbin.io/b/620d9bd74bf50f4b2dff1d6e/2`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -33,7 +33,29 @@ function Card() {
           <div className="showcase-image">
             <img src={item.image} alt={item.name}></img>
           </div>
-          <h4>{item.name}</h4>
+          <div class="showcase-info">
+            <div class="showcase-info__tile">
+              <h4>{item.name}</h4>
+            </div>
+            <div class="showcas-info__first-section">
+              <div class="showcase-info_first-section-modal">
+                <span>
+                  <h5>{item.model}</h5>
+                </span>
+                *
+                <span>
+                  <h5>{item.km}</h5>
+                </span>
+              </div>
+              <div class="showcase-info_first-section-price">
+                <h3>AED {item.price}</h3>
+              </div>
+            </div>
+            <div class="showcas-info__second-section">
+              <p>{item.date}</p>
+              <p>{item.location}</p>
+            </div>
+          </div>
         </div>
       ))}
     </div>

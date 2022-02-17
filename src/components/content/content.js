@@ -1,11 +1,11 @@
 import React from "react";
-import Filter from "../content/filter/filter";
+import FilterSelect from "../content/filter/filter";
 import Card from "../content/products/card";
 
 function Content() {
   return (
     <main className="contentArea">
-      <Filter />
+      <FilterSelect />
       <div className="contentInside">
         <Card />
       </div>

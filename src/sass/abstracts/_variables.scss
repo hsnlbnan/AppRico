@@ -17,3 +17,13 @@ $transition: 0.2s all linear;
   max-width: 1194px !important;
   margin: 0 auto;
 }
+
+%button-primary {
+  background: #222;
+  width: 100%;
+  margin-top: 1rem;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  padding: 1rem;
+}
