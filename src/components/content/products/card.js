@@ -6,7 +6,7 @@ function Card() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`https://api.jsonbin.io/b/620d9bd74bf50f4b2dff1d6e/2`, {
+    fetch(`https://api.jsonbin.io/b/620d9bd74bf50f4b2dff1d6e/3`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
