@@ -1,0 +1,19 @@
+$black: #000;
+$gray: rgba(255, 255, 255, 0.6);
+$main-text: #222;
+$white: #fff;
+$light-gray: #f9f9f9;
+$font: Gilroy;
+$font-size: 12px;
+$gutter: 4.8rem;
+$xs: 575;
+$sm: 767;
+$md: 991;
+$lg: 1199;
+$uppercase: uppercase;
+$transition: 0.2s all linear;
+
+.container {
+  max-width: 1194px !important;
+  margin: 0 auto;
+}

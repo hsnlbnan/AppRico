@@ -1,0 +1,11 @@
+@import "../layout/navigation";
+@import "../components/main";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: $gutter/2 0;
+  .logo {
+    flex: 0 0 20%;
+  }
+}

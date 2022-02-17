@@ -1,0 +1,11 @@
+.menuRight {
+  display: flex;
+  a {
+    margin-right: $gutter/4;
+  }
+
+  .menuRight-buttons {
+    display: flex;
+    gap: $gutter/3;
+  }
+}

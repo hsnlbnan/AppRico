@@ -1,0 +1,40 @@
+.menuWrapper {
+  flex: 0 0 50%;
+  .menuList {
+    display: flex;
+    flex: 0 0 20%;
+    .menuItem {
+      flex: 0 0 20%;
+      text-align: center;
+      a {
+        position: relative;
+        text-transform: $uppercase;
+        font-size: $font-size;
+        &:after {
+          content: "";
+          width: 0%;
+          height: 0;
+          background: $black;
+          transition: $transition;
+          position: absolute;
+          bottom: -5px;
+          left: 0;
+        }
+        &:hover {
+          transition: $transition;
+          color: $black;
+          &:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background: $black;
+            transition: 0.2s all linear;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.showcaseContainer {
+  gap: $gutter/4;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  .showcase {
+    flex: 0 0 31.3%;
+    h4 {
+      text-transform: $uppercase;
+      font-size: 1.04rem;
+    }
+  }
+}

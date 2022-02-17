@@ -1,0 +1,57 @@
+[
+  {
+     "id":1,
+     "name":"Figo Hatchback",
+     "brand":"Ford",
+     "model":"2020",
+     "price":"12.123,45",
+     "image":"https://imgd.aeplcdn.com/0x0/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg",
+     "location":"Burj Khalifa/ Dubai",
+     "date":"24 September 2021",
+     "km":"1000"
+  },
+  {
+     "id":2,
+     "name":"Figo Hatchback",
+     "brand":"Ford",
+     "model":"2020",
+     "price":"12.123,45",
+     "image":"https://imgd.aeplcdn.com/0x0/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg",
+     "location":"Burj Khalifa/ Dubai",
+     "date":"24 September 2021",
+     "km":"1000"
+  },
+  {
+     "id":3,
+     "name":"Figo Hatchback",
+     "brand":"Ford",
+     "model":"2020",
+     "price":"12.123,45",
+     "image":"https://imgd.aeplcdn.com/0x0/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg",
+     "location":"Burj Khalifa/ Dubai",
+     "date":"24 September 2021",
+     "km":"1000"
+  },
+  {
+     "id":4,
+     "name":"Figo Hatchback",
+     "brand":"Ford",
+     "model":"2020",
+     "price":"12.123,45",
+     "image":"https://imgd.aeplcdn.com/0x0/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg",
+     "location":"Burj Khalifa/ Dubai",
+     "date":"24 September 2021",
+     "km":"1000"
+  },
+  {
+     "id":5,
+     "name":"Figo Hatchback",
+     "brand":"Ford",
+     "model":"2020",
+     "price":"12.123,45",
+     "image":"https://imgd.aeplcdn.com/0x0/n/cw/ec/35463/figo-exterior-right-front-three-quarter-151689.jpeg",
+     "location":"Burj Khalifa/ Dubai",
+     "date":"24 September 2021",
+     "km":"1000"
+  }
+]

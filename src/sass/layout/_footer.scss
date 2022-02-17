@@ -1,0 +1,46 @@
+@import "/src/sass/abstracts/variables";
+
+footer {
+  background-color: $black;
+  display: flex;
+  padding: $gutter/2 $gutter/2 $gutter/2;
+  flex-direction: column;
+  .footer-menu_container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .footer-menu {
+    flex: 0 0 12%;
+    @include max($md) {
+      flex: 0 0 50%;
+    }
+    .footer-menu_list {
+      .footer-menu_list_title {
+        font-size: 16px;
+        color: $gray;
+        text-transform: uppercase;
+        @include flexLeft;
+      }
+      a {
+        color: $white;
+        margin: $gutter/4 0;
+        display: block;
+      }
+    }
+  }
+  .footer-copryright {
+    border-top: 1px solid $gray;
+    padding-top: $gutter/3;
+    display: flex;
+    gap: $gutter/1;
+    color: $gray;
+    .logo {
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

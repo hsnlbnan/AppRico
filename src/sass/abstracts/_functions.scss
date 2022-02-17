@@ -1,0 +1,24 @@
+@import "./variables";
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexLeft {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@mixin max($breakpoint) {
+  @media (max-width: $breakpoint + px) {
+    @content;
+  }
+}
+
+@mixin min($breakpoint) {
+  @media (min-width: ($breakpoint + 1) + px) {
+    @content;
+  }
+}
