@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 
-function FilterSelect() {
+function FilterSelect({ updateFilter }) {
   const [data, setData] = useState([]);
+  const [value, setValue] = useState("");
 
+  const handleChange = (e) => {
+    setValue(e.target.value);
+    updateFilter(e.target.value);
+    console.log(setValue);
+  };
   useEffect(() => {
     fetch(`https://api.jsonbin.io/b/620d9bd74bf50f4b2dff1d6e/2`, {
       headers: {
@@ -18,9 +24,11 @@ function FilterSelect() {
 
   return (
     <div className="filterArea">
-      <span class="filterArea_title">Search</span>
+      <span className="filterArea_title">Search</span>
       <select>
-        <option value="">Select Brand</option>
+        <option value={value} onChange={handleChange}>
+          Select Brand
+        </option>
         {data?.map((item) => (
           <option value={item.brand}>{item.brand}</option>
         ))}
@@ -43,18 +51,18 @@ function FilterSelect() {
           <option value={item.date}>{item.date}</option>
         ))}
       </select>
-      <span class="filterArea_title">Price Range</span>
-      <div class="input-group">
+      <span className="filterArea_title">Price Range</span>
+      <div className="input-group">
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder="Min"
           aria-label="Min"
           aria-describedby="basic-addon2"
         />
         <input
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder="Max"
           aria-label="Min"
           aria-describedby="basic-addon2"
@@ -67,8 +75,8 @@ function FilterSelect() {
           <option value={item.sellerType}>{item.sellerType}</option>
         ))}
       </select>
-      <span class="filterArea_title">Badge</span>
-      <div class="checkboxArea">
+      <span className="filterArea_title">Badge</span>
+      <div className="checkboxArea">
         <label>
           <input type="checkbox" />
           Full Service History
@@ -86,21 +94,21 @@ function FilterSelect() {
           Urgent
         </label>
       </div>
-      <span class="filterArea_title">Car Report</span>
-      <div class="checkboxArea">
+      <span className="filterArea_title">Car Report</span>
+      <div className="checkboxArea">
         <label>
           <input type="checkbox" />
           Full Service History
         </label>
-        <span class="filterArea_title">Content Language</span>
-        <div class="checkboxArea">
+        <span className="filterArea_title">Content Language</span>
+        <div className="checkboxArea">
           <label>
             <input type="checkbox" />
             Full Service History
           </label>
         </div>
       </div>
-      <button class="filterArea_button">Submit</button>
+      <button className="filterArea_button">Submit</button>
     </div>
   );
 }
