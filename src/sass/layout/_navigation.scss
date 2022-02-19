@@ -1,5 +1,6 @@
 .menuWrapper {
   flex: 0 0 50%;
+
   .menuList {
     display: flex;
     flex: 0 0 20%;
@@ -32,6 +33,53 @@
             position: absolute;
             bottom: -5px;
             left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include min($md) {
+}
+.hamburger_img.close {
+  display: none;
+}
+.right-menu.open {
+  display: block;
+}
+
+@include max($md) {
+  .right-menu {
+    .mobileMenu {
+      display: none;
+    }
+  }
+  .right-menu.open {
+    .mobileMenu {
+      width: 100%;
+      display: block;
+      position: absolute;
+      top: 14%;
+      left: 0;
+      .menuWrapper {
+        position: relative;
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        top: 10%;
+        left: 0;
+        .menuList {
+          flex-direction: column;
+          gap: 20px;
+          background-color: $black;
+          padding: 2rem;
+          .menuItem {
+            a {
+              color: $white;
+              font-size: calc($font-size) + 2px;
+            }
           }
         }
       }

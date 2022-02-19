@@ -3,4 +3,8 @@
   gap: $gutter/4;
   padding: 0 $gutter/2;
   margin: 0 auto;
+  flex-wrap: wrap;
+  .contentInside {
+    flex: 0 0 74%;
+  }
 }

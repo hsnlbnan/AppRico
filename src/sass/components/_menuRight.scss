@@ -7,5 +7,12 @@
   .menuRight-buttons {
     display: flex;
     gap: $gutter/3;
+    .menuRight-buttons_item {
+      @include min($md) {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
   }
 }
