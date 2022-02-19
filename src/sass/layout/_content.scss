@@ -4,7 +4,11 @@
   padding: 0 $gutter/2;
   margin: 0 auto;
   flex-wrap: wrap;
+  width: 100%;
   .contentInside {
-    flex: 0 0 74%;
+    flex: 0 0 73.7%;
+    @include max($lg) {
+      flex: 0 0 100%;
+    }
   }
 }

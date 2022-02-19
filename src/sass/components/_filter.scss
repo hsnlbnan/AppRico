@@ -2,6 +2,67 @@
   padding: $gutter/3;
   background: $light-gray;
   flex: 0 0 20%;
+  position: relative;
+  .hamburger_img {
+    display: none;
+  }
+  .closeIcon {
+    display: none;
+    @include max($lg) {
+      display: block;
+      position: relative;
+      .close {
+        display: none !important;
+        img {
+          display: none;
+        }
+      }
+      &:after {
+        content: "Close Filter";
+        font-size: 17px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .hamburger_img {
+    @include max($lg) {
+      display: block;
+      position: relative;
+      .close {
+        display: none !important;
+        img {
+          display: none;
+        }
+      }
+      &:after {
+        content: "Open Filter";
+        font-size: 17px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        padding-left: 1rem;
+      }
+    }
+  }
+  .hamburger_img.close {
+    display: none;
+  }
+  @include max($lg) {
+    flex: 0 0 100%;
+    display: grid;
+
+    .right-filter.float-right {
+      display: none;
+    }
+
+    .right-filter.float-right.open {
+      display: block;
+    }
+  }
   .filterArea_title {
     font-size: 1rem;
     margin: $gutter/5 0;

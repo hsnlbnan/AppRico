@@ -9,8 +9,7 @@ import Menu from "../menu/Menu";
 function Buttons() {
   const [openMenu, setOpenMenu] = useState(false);
   const toggleMenu = () => setOpenMenu((openMenu) => !openMenu);
-  const getXMarkClassName = () =>
-    `right-menu float-right ${openMenu ? "open" : ""}`;
+  const closeButton = () => `right-menu float-right ${openMenu ? "open" : ""}`;
   const mobileMenu = () => `hamburger_img ${openMenu ? "close" : ""}`;
   return (
     <div className="menuRight">
@@ -35,8 +34,8 @@ function Buttons() {
           <div className={mobileMenu()} onClick={toggleMenu}>
             <img src={menuOpen} alt="Menu bar" />
           </div>
-          <div className={getXMarkClassName()}>
-            <div className="x_mark_img" onClick={toggleMenu}>
+          <div className={closeButton()}>
+            <div className="closeIcon" onClick={toggleMenu}>
               <img src={menuClose} alt="Menu Close" />
             </div>
             <ul className="mobileMenu">
