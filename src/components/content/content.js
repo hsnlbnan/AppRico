@@ -9,6 +9,7 @@ import SliderFooter from "../footer/slider/slider";
 let PageSize = 3;
 
 function Content() {
+  const [currentData, setCurrentData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const currentTableData = useMemo(() => {
     const firstPageIndex = (currentPage - 1) * PageSize;
@@ -16,13 +17,18 @@ function Content() {
     return data.slice(firstPageIndex, lastPageIndex);
   }, [currentPage]);
 
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const brand = urlParams.get("brand");
+  console.log(brand);
+
   return (
     <main className="contentArea">
       <PageTitle />
       <FilterSelect />
       <div className="contentInside">
-        <div className="showcaseContainer">
-          <Card />
+        <div className="showcaseContainer" id="containWrap">
+          <Card products={currentData} />
         </div>
         <Pagination
           className="pagination-bar"

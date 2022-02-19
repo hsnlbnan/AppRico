@@ -28,7 +28,7 @@ function Card() {
 
   return (
     <>
-      {data?.map((item) => (
+      {data?.flatMap((item) => (
         <div className="showcase" key={item.id}>
           <div className="showcase-image">
             <img src={item.image} alt={item.name}></img>
