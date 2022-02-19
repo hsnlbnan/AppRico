@@ -4,6 +4,7 @@ import Card from "../content/products/card";
 import Pagination from "../pagination/pagination";
 import data from "../../data.json";
 import PageTitle from "../header/pageTitle/pageTitle";
+import SliderFooter from "../footer/slider/slider";
 
 let PageSize = 3;
 
@@ -20,7 +21,9 @@ function Content() {
       <PageTitle />
       <FilterSelect />
       <div className="contentInside">
-        <Card />
+        <div className="showcaseContainer">
+          <Card />
+        </div>
         <Pagination
           className="pagination-bar"
           currentPage={currentPage}
@@ -29,6 +32,7 @@ function Content() {
           onPageChange={(page) => setCurrentPage(page)}
         />
       </div>
+      <SliderFooter />
     </main>
   );
 }

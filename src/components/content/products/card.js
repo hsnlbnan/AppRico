@@ -27,7 +27,7 @@ function Card() {
   }
 
   return (
-    <div className="showcaseContainer">
+    <>
       {data?.map((item) => (
         <div className="showcase" key={item.id}>
           <div className="showcase-image">
@@ -58,7 +58,7 @@ function Card() {
           </div>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 
