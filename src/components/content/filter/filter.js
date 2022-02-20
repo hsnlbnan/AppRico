@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import menuOpen from "../../../assets/icons/menu-open.svg";
-import menuClose from "../../../assets/icons/menu-close.svg";
+import menuOpen from "../../../assets/icons/filter-open.svg";
+import menuClose from "../../../assets/icons/filter-close.svg";
 
 function getUnique(arr, comp) {
   //store the comparison  values in array

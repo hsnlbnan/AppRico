@@ -24,12 +24,14 @@
       width: fit-content;
       position: absolute;
       left: 20%;
+      margin: 0;
     }
 
     &.next {
       width: fit-content;
       position: absolute;
       right: 20%;
+      margin: 0;
     }
 
     &.dots:hover {

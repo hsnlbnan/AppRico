@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr;
   }
   @include max($sm) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .showcase {
     position: relative;
@@ -32,6 +32,11 @@
       align-items: center;
       font-size: 1.4rem;
       justify-content: space-between;
+      @include max($sm) {
+        flex-direction: column-reverse;
+        align-items: start;
+        margin-top: calc($gutter/4);
+      }
 
       .showcase-info_first-section-modal {
         display: flex;
@@ -53,6 +58,13 @@
       display: flex;
       justify-content: space-between;
       font-size: 0.8rem;
+      @include max($sm) {
+        flex-direction: column;
+        p {
+          margin: 0.2rem 0;
+          display: inline;
+        }
+      }
     }
   }
 }

@@ -64,7 +64,7 @@
       width: 100%;
       display: block;
       position: absolute;
-      top: 14%;
+      top: 12%;
       left: 0;
       z-index: 12;
       .menuWrapper {
@@ -77,13 +77,15 @@
         left: 0;
         .menuList {
           flex-direction: column;
-          gap: 20px;
           background-color: $black;
           padding: 2rem;
+
           .menuItem {
             a {
               color: $white;
+              margin: 1rem 0;
               font-size: calc($font-size) + 2px;
+              display: block;
             }
           }
         }
