@@ -2,6 +2,19 @@ import React, { useState, useEffect } from "react";
 import menuOpen from "../../../assets/icons/menu-open.svg";
 import menuClose from "../../../assets/icons/menu-close.svg";
 
+function getUnique(arr, comp) {
+  //store the comparison  values in array
+  const unique = arr
+    .map((e) => e[comp])
+    // store the indexes of the unique objects
+    .map((e, i, final) => final.indexOf(e) === i && i)
+    // eliminate the false indexes & return unique objects
+    .filter((e) => arr[e])
+    .map((e) => arr[e]);
+
+  return unique;
+}
+
 function FilterSelect({ updateFilter }) {
   const [data, setData] = useState([]);
   const [value, setValue] = useState("");
@@ -15,7 +28,6 @@ function FilterSelect({ updateFilter }) {
   const handleChange = (e) => {
     setValue(e.target.value);
     updateFilter(e.target.value);
-    console.log(setValue);
   };
   useEffect(() => {
     fetch(`https://api.jsonbin.io/b/620d9bd74bf50f4b2dff1d6e/2`, {
@@ -30,10 +42,11 @@ function FilterSelect({ updateFilter }) {
         setData(data);
       });
   }, []);
-  console.log(data);
-  var uniqBrand = [];
-  var uniqBrand = [...new Set(data.map((item) => item.brand))];
-
+  const uniqueBrand = getUnique(data, "brand");
+  const uniqueModel = getUnique(data, "model");
+  const uniqueStatus = getUnique(data, "status");
+  const uniqueDate = getUnique(data, "date");
+  const uniquesellerType = getUnique(data, "sellerType");
   return (
     <div className="filterArea">
       <form action="" method="get">
@@ -50,27 +63,27 @@ function FilterSelect({ updateFilter }) {
               <option value="" onChange={handleChange}>
                 Select Brand
               </option>
-              {console.log(uniqBrand)}
-
-              {uniqBrand.map((item) => (
-                <option value={uniqBrand}>{uniqBrand}</option>
+              {uniqueBrand?.map((item) => (
+                <option value={item.brand} key="key">
+                  {item.brand}
+                </option>
               ))}
             </select>
             <select name="model">
               <option value="">Select Model</option>
-              {data?.map((item) => (
+              {uniqueModel?.map((item) => (
                 <option value={item.model}>{item.model}</option>
               ))}
             </select>
             <select>
               <option value="">Used Cars for Sale</option>
 
-              {data?.map((item) => (
+              {uniqueStatus?.map((item) => (
                 <option value={item.status}>{item.status}</option>
               ))}
             </select>
             <select>
-              {data?.map((item) => (
+              {uniqueDate?.map((item) => (
                 <option value={item.date}>{item.date}</option>
               ))}
             </select>
@@ -94,7 +107,7 @@ function FilterSelect({ updateFilter }) {
 
             <select>
               <option value="">Seller Type</option>
-              {data?.map((item) => (
+              {uniquesellerType?.map((item) => (
                 <option value={item.sellerType}>{item.sellerType}</option>
               ))}
             </select>

@@ -33,25 +33,25 @@ function Card() {
           <div className="showcase-image">
             <img src={item.image} alt={item.name}></img>
           </div>
-          <div class="showcase-info">
-            <div class="showcase-info__tile">
+          <div className="showcase-info">
+            <div className="showcase-info__tile">
               <h4>{item.name}</h4>
             </div>
-            <div class="showcas-info__first-section">
-              <div class="showcase-info_first-section-modal">
+            <div className="showcas-info__first-section">
+              <div className="showcase-info_first-section-modal">
                 <span>
                   <h5>{item.model}</h5>
                 </span>
-                *
+                <span className="circle">●</span>
                 <span>
                   <h5>{item.km} KM</h5>
                 </span>
               </div>
-              <div class="showcase-info_first-section-price">
+              <div className="showcase-info_first-section-price">
                 <h3>AED {item.price}</h3>
               </div>
             </div>
-            <div class="showcas-info__second-section">
+            <div className="showcas-info__second-section">
               <p>{item.date}</p>
               <p>{item.location}</p>
             </div>

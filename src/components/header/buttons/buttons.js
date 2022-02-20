@@ -15,7 +15,7 @@ function Buttons() {
   const mobileMenu = () => `hamburger_img ${openMenu ? "close" : ""}`;
   return (
     <div className="menuRight">
-      <a href="">I want to be seller</a>
+      <a href="!#">I want to be seller</a>
       <ul className="menuRight-buttons">
         <li className="menuRight-buttons_item">
           <a onClick={() => setShow(!show)}>
@@ -24,12 +24,12 @@ function Buttons() {
           <Search show={show} />
         </li>
         <li className="menuRight-buttons_item">
-          <a href="">
+          <a href="!#">
             <img src={worldIcon} alt="World Icon" />
           </a>
         </li>
         <li className="menuRight-buttons_item">
-          <a href="">
+          <a href="!#">
             <img src={userIcon} alt="User Icon" />
           </a>
         </li>

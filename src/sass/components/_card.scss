@@ -24,7 +24,7 @@
     }
   }
   .showcase-info {
-    margin-top: $gutter/2;
+    margin-top: $gutter/3;
     color: $main-text;
     padding: 0 1rem 1.3rem;
     .showcas-info__first-section {
@@ -40,6 +40,10 @@
         margin-top: $gutter/6;
         margin-bottom: $gutter/6;
         align-items: center;
+        .circle {
+          color: #e2e2e2;
+          font-size: 11px;
+        }
       }
       .showcase-info_first-section-price {
         font-size: 1.1rem;
