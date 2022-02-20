@@ -11,6 +11,8 @@
   }
   .showcase {
     position: relative;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
     .showcase-image {
       position: relative;
       height: 10rem;
@@ -24,6 +26,7 @@
   .showcase-info {
     margin-top: $gutter/2;
     color: $main-text;
+    padding: 0 1rem 1.3rem;
     .showcas-info__first-section {
       display: flex;
       align-items: center;

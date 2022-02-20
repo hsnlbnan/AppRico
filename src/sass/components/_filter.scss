@@ -52,7 +52,7 @@
     display: none;
   }
   @include max($lg) {
-    flex: 0 0 100%;
+    flex: 0 0 90%;
     display: grid;
 
     .right-filter.float-right {

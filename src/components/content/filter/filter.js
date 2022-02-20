@@ -53,7 +53,7 @@ function FilterSelect({ updateFilter }) {
               {console.log(uniqBrand)}
 
               {uniqBrand.map((item) => (
-                <option value={uniqBrand}>{uniqBrand.value}</option>
+                <option value={uniqBrand}>{uniqBrand}</option>
               ))}
             </select>
             <select name="model">

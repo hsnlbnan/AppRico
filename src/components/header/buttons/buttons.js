@@ -5,9 +5,11 @@ import worldIcon from "../../../assets/icons/world.svg";
 import menuOpen from "../../../assets/icons/menu-open.svg";
 import menuClose from "../../../assets/icons/menu-close.svg";
 import Menu from "../menu/Menu";
-
+import Search from "../buttons/search";
 function Buttons() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [show, setShow] = useState(false);
+
   const toggleMenu = () => setOpenMenu((openMenu) => !openMenu);
   const closeButton = () => `right-menu float-right ${openMenu ? "open" : ""}`;
   const mobileMenu = () => `hamburger_img ${openMenu ? "close" : ""}`;
@@ -16,9 +18,10 @@ function Buttons() {
       <a href="">I want to be seller</a>
       <ul className="menuRight-buttons">
         <li className="menuRight-buttons_item">
-          <a href="">
+          <a onClick={() => setShow(!show)}>
             <img src={searchIcon} alt="Search Icon" />
           </a>
+          <Search show={show} />
         </li>
         <li className="menuRight-buttons_item">
           <a href="">

@@ -20,7 +20,6 @@ function Content() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const brand = urlParams.get("brand");
-  console.log(brand);
 
   return (
     <main className="contentArea">

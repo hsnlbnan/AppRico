@@ -1,10 +1,9 @@
 .contentArea {
   display: flex;
   gap: $gutter/4;
-  padding: 0 $gutter/2;
   margin: 0 auto;
   flex-wrap: wrap;
-  width: 100%;
+  width: 94%;
   .contentInside {
     flex: 0 0 73.7%;
     @include max($lg) {

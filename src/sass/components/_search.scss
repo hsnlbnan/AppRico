@@ -1,0 +1,25 @@
+.search-hide {
+  display: none;
+}
+
+.search-show {
+  display: block;
+}
+.dZHxtl {
+  height: 46px;
+  min-width: 350px;
+  position: absolute !important;
+  right: 12%;
+  margin-top: 1rem;
+  .wrapper {
+    border-radius: 10px !important;
+    font-family: $font !important;
+  }
+}
+.result-wrapper {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  .result-span__model {
+  }
+}
