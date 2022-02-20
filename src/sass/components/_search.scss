@@ -11,6 +11,9 @@
   position: absolute !important;
   right: 12%;
   margin-top: 1rem;
+  @include max($sm) {
+    left: 2.3%;
+  }
   .wrapper {
     border-radius: 10px !important;
     font-family: $font !important;
